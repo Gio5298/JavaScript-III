@@ -11,6 +11,14 @@
 
 // Principle 1
 
+function example(){
+    console.log(this.test)
+}
+
+var test = 'Test this principal';
+
+example();
+
 // code example for Window Binding
 
 // Principle 2
