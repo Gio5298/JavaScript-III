@@ -22,6 +22,10 @@ function GameObject(attrs){
   this.dimensions = attrs.dimensions;
 }
 
+GameObject.prototype.destroy = functioin(){
+  return `${this.name} was removed from the game.`;
+};
+
 /*
   === CharacterStats ===
   * healthPoints
