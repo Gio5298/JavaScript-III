@@ -2,7 +2,7 @@
 * in your own words. explain the four principles for the "this" keyword below.
 *
 * 1. Window Binding: Basically the default principle that if given no rules, will be the active. Unless strict mode is active which will return      undefined.
-* 2. 
+* 2. Implicit Binding: this principle only applies to methods with objects and is the one used in most situations. 
 * 3. 
 * 4. 
 *
@@ -41,6 +41,14 @@ person.greet();
 // Principle 3
 
 // code example for New Binding
+
+function Test(trial){
+    this.phrase = trial;
+}
+
+let myTest = new Test('This is a trial run!');
+
+console.log(myTest.phrase);
 
 // Principle 4
 
