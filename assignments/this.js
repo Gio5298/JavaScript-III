@@ -3,8 +3,8 @@
 *
 * 1. Window Binding: Basically the default principle that if given no rules, will be the active. Unless strict mode is active which will return      undefined.
 * 2. Implicit Binding: this principle only applies to methods with objects and is the one used in most situations. 
-* 3. 
-* 4. 
+* 3. New Binding: creates a new object and uses the 'new' keyword to guide towards it
+* 4. Explicit Binding: allows you to specifically and immediately invoke a function by choosing what the 'this' keyword is.
 *
 * write out a code example of each explanation above
 */
@@ -53,3 +53,20 @@ console.log(myTest.phrase);
 // Principle 4
 
 // code example for Explicit Binding
+
+function human(){
+    console.log(this.greeting)
+}
+
+let personOne = {
+    name: 'Arnold',
+    greeting: 'Hello',
+}
+
+let personTwo = {
+    name: 'John',
+    greeting: 'Howdy',
+}
+
+human.call(personOne);
+human.call(personTwo);
