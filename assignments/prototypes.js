@@ -42,7 +42,7 @@ function CharacterStats(charAttrs){
 CharacterStats.prototype = Object.create(GameObject.prototype);
 
 CharacterStats.prototype.takeDamage = function(){
-  return `<object name> took damage.`;
+  return `${this.name} took damage.`;
 };
 
 /*
@@ -62,7 +62,11 @@ function Humanoid(humanAttrs){
   this.language = humanAttrs.language;
 }
 
+Humanoid.prototype = Object.create(CharacterStats.prototype);
 
+Humanoid.prototype.greet = function () {
+  return `${this.name} offers a greeting in ${this.language}.`;
+};
 
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
